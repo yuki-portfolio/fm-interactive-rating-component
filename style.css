@@ -1,0 +1,123 @@
+body {
+    background-color: #141519;
+    font-family: 'Overpass';
+    cursor: default;
+}
+
+/* -----Text----- */
+
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    color: hsl(0, 100%, 100%);
+}
+
+p {
+    font-size: 15px;
+    color: hsl(0, 100%, 100%);
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+/* -----Blocks----- */
+
+.main-block {
+    width: 80%;
+    height: 40%;
+    margin: 45% auto;
+    border-radius: 25px;
+    padding: 30px;
+    background-color: #222933;
+}
+
+.block-star {
+    background-color: #272e38;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.img-star {
+    max-width: 100%;
+    height: auto;
+    padding: 28% 25% 25% 28%;
+}
+
+/* -----Buttons----- */
+
+button {
+    border: none;
+}
+
+.rate-numbers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate-numbers button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #272e38;  
+    color: white;
+    transition: all 200ms;
+}
+
+.button-submit {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #222933;
+    margin: 10% 20% 5% 2%;
+    width: 95%;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #fc7613;
+}
+
+/* -----Animation------- */
+
+.button-submit:hover {
+    background-color: white;
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.number:hover {
+    background-color: #fc7613;
+    color: #222933;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.button-submit:active {
+    transform: scale(0.98);
+    transition: all 200ms;
+}
+
+.number:active {                 /*в JS после нажатия оставь белой, класс '.color' */
+    background-color: white;
+    transform: scale(0.98);
+    transition: all 200ms;
+}
+
+
+
+
+
+
+
+
+.block-after {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .main-block {
+        width: 22%;
+        height: 40%;
+        margin: 10% auto;
+    }
+    
+}
