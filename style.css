@@ -4,6 +4,15 @@ body {
     cursor: default;
 }
 
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+
 /* -----Text----- */
 
 .title {
@@ -60,7 +69,7 @@ button {
     border-radius: 50%;
     background-color: #272e38;  
     color: white;
-    transition: all 200ms;
+    transition: all 100ms;
 }
 
 .button-submit {
@@ -80,7 +89,7 @@ button {
     background-color: white;
     transform: scale(1.02);
     cursor: pointer;
-    transition: all 200ms;
+    transition: all 100ms;
 }
 
 .number:hover {
@@ -88,39 +97,84 @@ button {
     color: #222933;
     transform: scale(1.1);
     cursor: pointer;
-    transition: all 200ms;
+    transition: all 100ms;
 }
 
 .button-submit:active {
     transform: scale(0.98);
-    transition: all 200ms;
+    transition: all 100ms;
 }
 
 .number:active {                 /*в JS после нажатия оставь белой, класс '.color' */
     background-color: white;
     transform: scale(0.98);
-    transition: all 200ms;
+    transition: all 100ms;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* --------After click------------ */
 
 .block-after {
     display: none;
 }
+
+.block-after.after-click {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.block-selected {
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #272e38;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.block-selected p {
+    color: #fc7613;
+}
+
+.block-thankyou {
+    text-align: center;
+    color: white;
+    margin-top: 2%;
+}
+
+.block-thankyou p {
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.number.selected {
+    background-color: white;
+    color: #222933;
+}
+
+
+.block-inside.after-click {
+    display: none;
+}
+
+.button-submit.wrong {
+    animation: shake 0.4s ease-in-out;
+}
+
+.rate-numbers.wrong {
+    animation: shake 0.4s ease-in-out;
+}
+
+/* ----------------------------------- */
+
+
+
+
+
+
 
 @media (min-width: 1024px) {
     .main-block {
